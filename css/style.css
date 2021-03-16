@@ -1,0 +1,148 @@
+body{
+	margin:0px;
+	padding:0px;
+}
+#kafelek1{
+	float:left;
+	width:40%;
+	height:50%;
+	background-color: #6a27a5;
+}
+#kafelek2{
+	float:right;
+	width:60%;
+	height:80%;
+	padding:2%;
+	background-color:#8530cf;
+}
+#kafelek3{
+	float:left;
+	width:40%;
+	height:50%;
+	background-color:#5d2291;
+}
+#kafelek4{
+	float:right;
+	width:60%;
+	height:20%;
+	background-color:#6a27a5;
+}
+#kafelek1 > li{
+	display:block;
+	border-radius:5px;
+	text-align:center;
+	width:10%;
+	background-color:#421867;
+	color:AliceBlue;
+	float:left;
+	height:30px;
+	margin:7.5%;
+	min-width:76px;
+}
+#kafelek1 > li > ol > li{
+	display:none;
+	border:solid 2px #737373;
+	height:30px;
+	background-color:#cccccc;
+	clear:both;
+	margin:-4px;
+	margin-left:-80%;
+}
+#kafelek1 > li:hover{
+	background-color:#999999;
+}
+#kafelek1 > li:hover ol > li{
+	display:block;
+}
+#kafelek1 > li > ol > li:hover{
+	display:block;
+	background-color:#999999;
+}
+#kafelek1 > li > ol{
+	border-radius:5px;
+}
+#kafelek3{
+	text-align:center;
+}
+#panel{
+	background-color: #d9d9d9;
+	width: 80%;
+	height: 20%;
+	margin:auto;
+	margin-top:5%;
+	margin-bottom:5%;
+	font-size:30px;
+	font-weight:bold;
+}
+.Klawiatura{
+	display:block;
+	float:left;
+	background-color:black;
+	color:Beige;
+	font-weight:bold;
+	border-radius:30px;
+	border:solid 2px #772cba;
+	height:7%;
+	width:7%;
+	margin:5px;
+	min-height:30px;
+}
+.Klawiatura:hover{
+	background-color:#772cba;
+}
+.Klawiatura:active{
+	background-color:#e7d5f6;
+}
+#Kalendarz > .row > .col{
+	background-color:black;
+	color:AliceBlue;
+	border:solid 1px AliceBlue;
+	min-width:90px;
+}
+.figure{
+	height:100px;
+}
+#Kalendarz > .row > .figure:hover{
+	width:150px;
+	height:150px;
+	position:initial;
+}
+.bloczek {
+	width:50px;
+	height:50px;
+	background-color:red;
+}
+#Kalendarz > .row{
+	min-width:793px;
+}
+.navbar{
+	padding:2%;
+	background-color:#421868;
+}
+a{
+text-decoration: none;
+}
+#clock{
+	text-size: 30px;
+	font-weight: bold;
+	width:80%;
+	background-color: #b682e3;
+}
+#ekran{
+	text-transform:uppercase;
+}
+.text-log{
+	background-color:#e7d6f5;
+}
+.button-log{
+	background-color:#501d7c;
+	border-color:#6a27a5;
+	color:#e7d6f5;
+}
+#logowanie{
+	margin-left:50%;
+	margin-right:50%;
+}
+.modal-content{
+	background-color: #9145d3;
+}
