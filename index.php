@@ -2,7 +2,11 @@
 <html lang="pl">
 	<head>
 		<title> Plan Twojego Dnia</title>
-		<meta charset="UTF-8">
+		<meta charset="UTF-8"/>
+		<meta name="description" content="Kalendarz, aplikacja mająca na celu pomoc w planowaniu miesiąca!"/>
+		<meta name="keywords" content="kalendarz, plan, dzień, pomoc, lepszy dzień, zaplanuj, organizacja, planowanie"/>
+		<meta name="author" content="Daniel N" />
+		<meta name="robots" content="follow"/>
 		<!-- BOOTSTRAP -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
 		<!-- /BOOTSTRAP -->
