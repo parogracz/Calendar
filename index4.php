@@ -55,8 +55,8 @@
 							<?php
 								Dane_Konta($_SESSION['login']);
 							?>
-							<h5><a href="" class="button-n">Zmień dane konta</a> </h5>
-							<h5><a href="" class="button-o">Usuń konto</a> </h5>
+							<h5><a href="index5.php" class="button-n">Zmień dane konta</a> </h5>
+							<h5><a href="index6.php" class="button-o">Usuń konto</a> </h5>
 						</div>
 					</div>
 				</div>
