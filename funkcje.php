@@ -121,13 +121,13 @@ function Usun($id)
 }
 function Alert_Box()
 {
-	if($_SESSION['err_dane_log']){echo "<center><h1>Błędne dane logowania!</h1></center>";$_SESSION['err_dane_log']=false;}
-	if($_SESSION['err_zarejestrowano']){echo "<center><h1>Nie udało się utworzyć konta!</h1></center>";$_SESSION['err_zarejestrowano']=false;}
-	if($_SESSION['err_dodaj']){echo "<center><h1>Błąd dodania zadania!</h1></center>";$_SESSION['err_dodaj']=false;}
-	if($_SESSION['err_usun']){echo "<center><h1>Błąd usuwania zadania!</h1></center>";$_SESSION['err_usun']=false;}
-	if($_SESSION['alert_zalogowano']){echo "<center><h1>Pomyślnie zalogowano! Witaj $_SESSION[login]!</h1></center>";$_SESSION['alert_zalogowano']=false;}
-	if($_SESSION['alert_wylogowano']){echo "<center><h1>Pomyślnie wylogowano!</h1></center>";$_SESSION['alert_wylogowano']=false;}
-	if($_SESSION['alert_zarejestrowano']){echo "<center><h1>Pomyślnie zarejestrowano!</h1></center>";$_SESSION['alert_zarejestrowano']=false;}
+	if($_SESSION['err_dane_log']){echo "<center><h1 class=\"alert alert-danger\">Błędne dane logowania!</h1></center>";$_SESSION['err_dane_log']=false;}
+	if($_SESSION['err_zarejestrowano']){echo "<center><h1 class=\"alert alert-danger\">Nie udało się utworzyć konta!</h1></center>";$_SESSION['err_zarejestrowano']=false;}
+	if($_SESSION['err_dodaj']){echo "<center><h1 class=\"alert alert-danger\">Błąd dodania zadania!</h1></center>";$_SESSION['err_dodaj']=false;}
+	if($_SESSION['err_usun']){echo "<center><h1 class=\"alert alert-danger\">Błąd usuwania zadania!</h1></center>";$_SESSION['err_usun']=false;}
+	if($_SESSION['alert_zalogowano']){echo "<center><h1 class=\"alert alert-success\">Pomyślnie zalogowano! Witaj $_SESSION[login]!</h1></center>";$_SESSION['alert_zalogowano']=false;}
+	if($_SESSION['alert_wylogowano']){echo "<center><h1 class=\"alert alert-success\">Pomyślnie wylogowano!</h1></center>";$_SESSION['alert_wylogowano']=false;}
+	if($_SESSION['alert_zarejestrowano']){echo "<center><h1 class=\"alert alert-success\">Pomyślnie zarejestrowano!</h1></center>";$_SESSION['alert_zarejestrowano']=false;}
 }
 function Dane_Konta($login)
 {

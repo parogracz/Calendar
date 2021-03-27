@@ -146,3 +146,24 @@ text-decoration: none;
 .modal-content{
 	background-color: #9145d3;
 }
+.button-n{
+	display: block;
+	color:#28799e;
+	width:50%;
+	height:30px;
+	margin-top:10px;
+}
+.button-o{
+	display: block;
+	color:red;
+	width:50%;
+	height:30px;
+	margin-top:10px;
+}
+
+
+
+
+
+
+
