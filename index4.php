@@ -13,10 +13,24 @@
 		<link rel="stylesheet" href="css/style.css"/>
 		<script src="funkcje.js"></script>
 		<?php 
-		SESSION_START();
-		include("funkcje.php");
-		include("dbconnect.php");
-		if(!$_SESSION['zalogowano']) header("Location: index2.php");
+			SESSION_START();
+			include("funkcje.php");
+			include("dbconnect.php");
+			
+			if(!isset($_SESSION['zalogowano'])) $_SESSION['zalogowano']=false;
+			
+			if(!isset($_SESSION['err_dane_log'])) $_SESSION['err_dane_log']=false;
+			if(!isset($_SESSION['err_zarejestrowano'])) $_SESSION['err_zarejestrowano']=false;
+			if(!isset($_SESSION['err_dodaj'])) $_SESSION['err_dodaj']=false;
+			if(!isset($_SESSION['err_usun'])) $_SESSION['err_usun']=false;
+			if(!isset($_SESSION['err_usunkon'])) $_SESSION['err_usunkon']=false;
+			
+			if(!isset($_SESSION['alert_zalogowano'])) $_SESSION['alert_zalogowano']=false;
+			if(!isset($_SESSION['alert_wylogowano'])) $_SESSION['alert_wylogowano']=false;
+			if(!isset($_SESSION['alert_zarejestrowano'])) $_SESSION['alert_zarejestrowano']=false;
+			if(!isset($_SESSION['alert_usunieto'])) $_SESSION['alert_usunieto']=false;
+			//if(!isset($_SESSION['zalogowano'])) $_SESSION['zalogowano']=false;
+			if(!$_SESSION['zalogowano']) header("Location: index2.php");
 		?>
 	</head>
 	<body onload="Zegar()">
@@ -55,8 +69,8 @@
 							<?php
 								Dane_Konta($_SESSION['login']);
 							?>
-							<div style="float:left"><h5 ><a href="index5.php" class="button-n w-50">Zmień dane konta</a> </h5></div>
-							<div style="float:right"><h5 ><a href="float:right" button-o w-50">Usuń konto</a> </h5></div>
+							<h5><a href="index5.php" class="button-n">Zmień dane konta</a></h5>
+							<h5><a href="index6.php" class="button-o">Usuń konto</a></h5>
 						</div> 
 					</div>
 				</div>

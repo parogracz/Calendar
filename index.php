@@ -23,10 +23,12 @@
 			if(!isset($_SESSION['err_zarejestrowano'])) $_SESSION['err_zarejestrowano']=false;
 			if(!isset($_SESSION['err_dodaj'])) $_SESSION['err_dodaj']=false;
 			if(!isset($_SESSION['err_usun'])) $_SESSION['err_usun']=false;
+			if(!isset($_SESSION['err_usunkon'])) $_SESSION['err_usunkon']=false;
 			
 			if(!isset($_SESSION['alert_zalogowano'])) $_SESSION['alert_zalogowano']=false;
 			if(!isset($_SESSION['alert_wylogowano'])) $_SESSION['alert_wylogowano']=false;
 			if(!isset($_SESSION['alert_zarejestrowano'])) $_SESSION['alert_zarejestrowano']=false;
+			if(!isset($_SESSION['alert_usunieto'])) $_SESSION['alert_usunieto']=false;
 			//if(!isset($_SESSION['zalogowano'])) $_SESSION['zalogowano']=false;
 			
 			if(!$_SESSION['zalogowano']) header("Location: index2.php");

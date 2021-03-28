@@ -13,10 +13,25 @@
 		<link rel="stylesheet" href="css/style.css"/>
 		<script src="funkcje.js"></script>
 		<?php 
-		SESSION_START();
-		include("funkcje.php");
-		include("dbconnect.php");
-		if(!$_SESSION['zalogowano']) header("Location: index2.php");
+			SESSION_START();
+			include("funkcje.php");
+			include("dbconnect.php");
+			
+			if(!isset($_SESSION['zalogowano'])) $_SESSION['zalogowano']=false;
+			
+			if(!isset($_SESSION['err_dane_log'])) $_SESSION['err_dane_log']=false;
+			if(!isset($_SESSION['err_zarejestrowano'])) $_SESSION['err_zarejestrowano']=false;
+			if(!isset($_SESSION['err_dodaj'])) $_SESSION['err_dodaj']=false;
+			if(!isset($_SESSION['err_usun'])) $_SESSION['err_usun']=false;
+			if(!isset($_SESSION['err_usunkon'])) $_SESSION['err_usunkon']=false;
+			
+			if(!isset($_SESSION['alert_zalogowano'])) $_SESSION['alert_zalogowano']=false;
+			if(!isset($_SESSION['alert_wylogowano'])) $_SESSION['alert_wylogowano']=false;
+			if(!isset($_SESSION['alert_zarejestrowano'])) $_SESSION['alert_zarejestrowano']=false;
+			if(!isset($_SESSION['alert_usunieto'])) $_SESSION['alert_usunieto']=false;
+			//if(!isset($_SESSION['zalogowano'])) $_SESSION['zalogowano']=false;
+			
+			if(!$_SESSION['zalogowano']) header("Location: index2.php");
 		?>
 	</head>
 	<body onload="Zegar()">
@@ -52,11 +67,12 @@
 							<h3 class="modal-title">Dane Konta</h3>
 						</div>
 						<div class="modal-body">
-							<?php
-								Dane_Konta($_SESSION['login']);
-							?>
-							<h5><a href="" class="button-n">Zmień dane konta</a> </h5>
-							<h5><a href="" class="button-o">Usuń konto</a> </h5>
+							<h4 class="alert alert-danger">Czy jesteś pewien? <br> (Usunięcia konta nie da się cofnąć!)</h4>
+							<form action="usun_kon.php" method="POST">
+								<label> Tak, jestem pewien <input type="checkbox" name="check" class="form-check-input"/>  
+								<input type="password" name="haslo" class="fadeIn second text-log" placeholder="hasło"/></label> 
+								<input type="submit" class="button-log" value="Usuń konto"/>
+							</form>
 						</div>
 					</div>
 				</div>
