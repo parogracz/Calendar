@@ -163,6 +163,14 @@ text-decoration: none;
 .form-check-input{
 	background-color: red;
 }
+l{
+	display:block;
+	height:20px;
+}
+.lo{
+	margin:14px;
+	margin-top:0px;
+}
 
 
 

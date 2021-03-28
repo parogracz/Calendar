@@ -67,9 +67,23 @@
 							<h3 class="modal-title">Dane Konta</h3>
 						</div>
 						<div class="modal-body">
-							Nazwa użytkownika:<input type="text" class:"form-control"> </input> <br>
-							Konto E-Mail:<input type="email"> </input> <br>
-							Hasło:<input type="password"> </input> <br>
+							<form action="">
+								<div style="float:left">
+									<l>Nazwa użytkownika: </l><br>
+									<l>Konto E-Mail: </l><br>
+									<l>Hasło: </l><br>
+									<l>Powtórz Hasło: </l><br>
+								</div>
+								<div style="float:left"> 
+									<input type="text" class="lo" name="login"> <br>
+									<input type="email" class="lo" name="mail"> <br>
+									<input type="password" class="lo" name="haslo"> <br>
+									<input type="password" class="lo" name="haslo2"> <br>
+								</div>
+								<div style="clear:both">
+									<input type="submit" value="Zapisz!" class="fadeIn third button-log">
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
