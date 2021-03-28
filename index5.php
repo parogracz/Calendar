@@ -52,11 +52,9 @@
 							<h3 class="modal-title">Dane Konta</h3>
 						</div>
 						<div class="modal-body">
-							<?php
-								Dane_Konta($_SESSION['login']);
-							?>
-							<h5><a href="" class="button-n">Zmień dane konta</a> </h5>
-							<h5><a href="" class="button-o">Usuń konto</a> </h5>
+							Nazwa użytkownika:<input type="text" class:"form-control"> </input> <br>
+							Konto E-Mail:<input type="email"> </input> <br>
+							Hasło:<input type="password"> </input> <br>
 						</div>
 					</div>
 				</div>
