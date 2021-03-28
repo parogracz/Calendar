@@ -24,11 +24,13 @@
 			if(!isset($_SESSION['err_dodaj'])) $_SESSION['err_dodaj']=false;
 			if(!isset($_SESSION['err_usun'])) $_SESSION['err_usun']=false;
 			if(!isset($_SESSION['err_usunkon'])) $_SESSION['err_usunkon']=false;
+			if(!isset($_SESSION['err_zmiana'])) $_SESSION['err_zmiana']=false;
 			
 			if(!isset($_SESSION['alert_zalogowano'])) $_SESSION['alert_zalogowano']=false;
 			if(!isset($_SESSION['alert_wylogowano'])) $_SESSION['alert_wylogowano']=false;
 			if(!isset($_SESSION['alert_zarejestrowano'])) $_SESSION['alert_zarejestrowano']=false;
 			if(!isset($_SESSION['alert_usunieto'])) $_SESSION['alert_usunieto']=false;
+			if(!isset($_SESSION['alert_zmiana'])) $_SESSION['alert_zmiana']=false;
 			//if(!isset($_SESSION['zalogowano'])) $_SESSION['zalogowano']=false;
 			
 			if(!$_SESSION['zalogowano']) header("Location: index2.php");
@@ -67,7 +69,7 @@
 							<h3 class="modal-title">Dane Konta</h3>
 						</div>
 						<div class="modal-body">
-							<form action="">
+							<form action="zmiana_danych.php" method="POST">
 								<div style="float:left">
 									<l>Nazwa użytkownika: </l><br>
 									<l>Konto E-Mail: </l><br>
@@ -94,6 +96,7 @@
 				<div id="Bot_text"> 
 				<?php
 					Alert_Box();
+					//$_SESSION['err_zmiana'] = true;
 				?>
 				</div>
 			</div>
