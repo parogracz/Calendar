@@ -72,15 +72,12 @@
 				<div class="modal-dialog">
 					<div class="modal-content" style="background-color:#f3eafa">
 						<div class="modal-header">
-							<h3 class="modal-title">Dane Konta</h3>
+							<h3 class="modal-title">Konta Serwisu</h3>
 						</div>
-						<div class="modal-body">
-							<h4 class="alert alert-danger">Czy jesteś pewien? <br> (Usunięcia konta nie da się cofnąć!)</h4>
-							<form action="usun_kon.php" method="POST">
-								<label> Tak, jestem pewien <input type="checkbox" name="check" class="form-check-input"/>  
-								<input type="password" name="haslo" class="fadeIn second text-log" placeholder="hasło"/></label> 
-								<input type="submit" class="button-log" value="Usuń konto"/>
-							</form>
+						<div>
+							<?php
+								Rejestr_Kont()
+							?><br>
 						</div>
 					</div>
 				</div>

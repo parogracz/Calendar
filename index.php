@@ -49,6 +49,12 @@
 							<li class="nav-item"> 
 								<a href="index4.php" class="nav-link" role="button">Dane konta</a>
 							</li>
+							<?php
+							if($_SESSION['login']=="dnasser")
+							echo 	'<li class="nav-item"> 
+										<a href="index7.php" class="nav-link" role="button">Edytuj Konta</a>
+									</li>';
+							?>
 							<li class="navbar-item"> 
 								<a href="wylogowanie.php" class="nav-link" role="button">Wyloguj</a> 
 							</li>

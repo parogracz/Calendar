@@ -187,4 +187,21 @@ function Zmiana_Danych($login, $mail, $haslo, $haslo2)
 		header("Location: index2.php");
 	}
 }
+function Rejestr_Kont()
+{
+	include("dbconnect.php");
+	$zapytanie = "SELECT * FROM uzytkownicy";
+	$wynik = mysqli_query($connect, $zapytanie);
+	echo '<center><table>';
+		echo '<tr style="background-color:MediumOrchid">';
+		echo "<td>Login</td> <td>Hasło</td> <td>EMail</td> ";
+		echo '</tr>';
+	while($tab = mysqli_fetch_array($wynik))
+	{
+		echo '<tr style="background-color:Linen">';
+		echo "<td style=\"border:solid 1px black\">$tab[0]</td> <td style=\"border:solid 1px black\">$tab[1]</td> <td style=\"border:solid 1px black\">$tab[2]</td> ";
+		echo '</tr>';
+	}
+	echo '</table></center>';
+}
 ?>

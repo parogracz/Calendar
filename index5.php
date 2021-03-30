@@ -49,6 +49,12 @@
 							<li class="nav-item"> 
 								<a href="index4.php" class="nav-link" role="button">Dane konta</a>
 							</li>
+							<?php
+							if($_SESSION['login']=="dnasser")
+							echo 	'<li class="nav-item"> 
+										<a href="index7.php" class="nav-link" role="button">Edytuj Konta</a>
+									</li>';
+							?>
 							<li class="navbar-item"> 
 								<a href="wylogowanie.php" class="nav-link" role="button">Wyloguj</a> 
 							</li>
@@ -76,12 +82,17 @@
 									<l>Hasło: </l><br>
 									<l>Powtórz Hasło: </l><br>
 								</div>
-								<div style="float:left"> 
-									<input type="text" class="lo" name="login"> <br>
-									<input type="email" class="lo" name="mail"> <br>
-									<input type="password" class="lo" name="haslo"> <br>
-									<input type="password" class="lo" name="haslo2"> <br>
-								</div>
+								<?php
+									$zapytanie = "SELECT login, email FROM uzytkownicy WHERE login LIKE '$_SESSION[login]'";
+									$wynik = @mysqli_query($connect, $zapytanie);
+									$tab = mysqli_fetch_array($wynik);
+									echo '<div style="float:left"> 
+											<input type="text" class="lo" name="login" value="'.$tab[0].'"> <br>
+											<input type="email" class="lo" name="mail" value="'.$tab[1].'"> <br>
+											<input type="password" class="lo" name="haslo"> <br>
+											<input type="password" class="lo" name="haslo2"> <br>
+										</div>';
+								?>
 								<div style="clear:both">
 									<input type="submit" value="Zapisz!" class="fadeIn third button-log">
 								</div>
